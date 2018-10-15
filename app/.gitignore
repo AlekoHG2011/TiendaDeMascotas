@@ -1,0 +1,24 @@
+#---directorios-----
+.gradle/
+.idea/
+build/
+app/build/
+
+#---ficheros específicos-----
+*.apk
+app/app.iml
+
+#---Del Android Studio
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+/.idea/dictionaries
+.DS_Store
+/build
+/captures
+/.idea/*
+/app/build
+/app/libs
+/gradle

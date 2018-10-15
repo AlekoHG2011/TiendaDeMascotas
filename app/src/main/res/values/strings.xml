@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mi Tienda de Mascotas</string>
+    <string name="pnombre">Nombre</string>
+    <string name="pedad">Edad</string>
+    <string name="ver_pets">Ver Mascotas</string>
+    <string name="menu_ayuda">Ayuda</string>
+    <string name="menu_config">Configuración</string>
+    <string name="texto_ayuda">Created By Alejandro</string>
+    <string name="texto_config">Created By Alejandro</string>
+</resources>
