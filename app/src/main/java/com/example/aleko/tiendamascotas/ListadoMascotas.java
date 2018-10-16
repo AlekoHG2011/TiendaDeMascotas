@@ -61,17 +61,19 @@ public class ListadoMascotas extends AppCompatActivity {
         switch (item.getItemId()) {
 
             case R.id.mAyuda:
-                Intent intent = new Intent(this, ActivityAyuda.class);
-                startActivity(intent);
+                Intent intentAyuda = new Intent(this, ActivityAyuda.class);
+                startActivity(intentAyuda);
                 break;
 
             case R.id.mConfiguracion:
-                Intent intent1 = new Intent(this, ActivityConfiguracion.class);
-                startActivity(intent1);
+                Intent intentConfig = new Intent(this, ActivityConfiguracion.class);
+                startActivity(intentConfig);
                 break;
 
-            case R.id.mRefresh:
-                Toast.makeText(this, "Refresh", Toast.LENGTH_SHORT).show();
+            case R.id.mFavoritos:
+                Intent intentFav = new Intent(this, MascotasFavoritas.class);
+                startActivity(intentFav);
+                break;
         }
 
         return super.onOptionsItemSelected(item);
@@ -94,6 +96,11 @@ public class ListadoMascotas extends AppCompatActivity {
         mascotas.add(new Mascota("Titi", "12 meses", R.drawable.d4));
         mascotas.add(new Mascota("Peggy", "18 meses", R.drawable.c1));
         mascotas.add(new Mascota("Fruti", "8 meses", R.drawable.d5));
+        mascotas.add(new Mascota("Yoyo", "1 mes", R.drawable.rabbit));
+        mascotas.add(new Mascota("Fredd", "5 meses", R.drawable.dancercat));
+        mascotas.add(new Mascota("Maximus", "2 años", R.drawable.d7));
+        mascotas.add(new Mascota("Sisi", "2 meses", R.drawable.vacunar_gatos));
+        mascotas.add(new Mascota("Odoo", "12 meses", R.drawable.cooker));
     }
 
     @Override

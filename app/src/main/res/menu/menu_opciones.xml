@@ -11,9 +11,9 @@
         android:orderInCategory="100"></item>
 
     <item
-        android:id="@+id/mRefresh"
-        android:title="Refresh"
+        android:id="@+id/mFavoritos"
+        android:title="@string/menu_fav"
         android:orderInCategory="102"
         app:showAsAction="always"
-        android:icon="@drawable/ic_refresh" />
+        android:icon="@drawable/star_hotel_48" />
 </menu>

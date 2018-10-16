@@ -48,8 +48,10 @@ public class ActivityConfiguracion extends AppCompatActivity {
                 startActivity(intent1);
                 break;
 
-            case R.id.mRefresh:
-                Toast.makeText(this, "Refresh", Toast.LENGTH_SHORT).show();
+            case R.id.mFavoritos:
+                Intent intentFav = new Intent(this, MascotasFavoritas.class);
+                startActivity(intentFav);
+                break;
         }
 
         return super.onOptionsItemSelected(item);

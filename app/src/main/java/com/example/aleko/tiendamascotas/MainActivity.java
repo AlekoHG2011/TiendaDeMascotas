@@ -37,17 +37,19 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
 
             case R.id.mAyuda:
-                Intent intent = new Intent(this, ActivityAyuda.class);
-                startActivity(intent);
+                Intent intentAyuda = new Intent(this, ActivityAyuda.class);
+                startActivity(intentAyuda);
                 break;
 
             case R.id.mConfiguracion:
-                Intent intent1 = new Intent(this, ActivityConfiguracion.class);
-                startActivity(intent1);
+                Intent intentConfig = new Intent(this, ActivityConfiguracion.class);
+                startActivity(intentConfig);
                 break;
 
-            case R.id.mRefresh:
-                Toast.makeText(this, "Refresh", Toast.LENGTH_SHORT).show();
+            /*case R.id.mFavoritos:
+                Intent intentFav = new Intent(this, MascotasFavoritas.class);
+                startActivity(intentFav);
+                break;*/
         }
 
         return super.onOptionsItemSelected(item);
