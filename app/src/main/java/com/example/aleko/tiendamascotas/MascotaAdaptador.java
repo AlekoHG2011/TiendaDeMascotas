@@ -24,6 +24,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
 
     ArrayList<Mascota> mascotas;
     Activity activity;
+    TextView tvAVG;
 
     public MascotaAdaptador(ArrayList<Mascota> mascotas, Activity activity) {
 
@@ -39,12 +40,13 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     @Override
-    public void onBindViewHolder(MascotaViewHolder mascotaViewHolder, int position) { // asocia cada elemento de la lista con cada view
+    public void onBindViewHolder(final MascotaViewHolder mascotaViewHolder, int position) { // asocia cada elemento de la lista con cada view
 
         final Mascota mascota = mascotas.get(position);
         mascotaViewHolder.imgFoto.setImageResource(mascota.getFoto());
         mascotaViewHolder.tvNombreCV.setText(mascota.getNombre());
         mascotaViewHolder.tvEdadCV.setText(mascota.getEdad());
+        mascotaViewHolder.tvAVG.setText(String.valueOf(mascota.getAvg()));
 
         mascotaViewHolder.imgFoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +63,10 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             @Override
             public void onClick(View v) {
                 Toast.makeText(activity, "Diste Like a " + mascota.getNombre(), Toast.LENGTH_SHORT).show();
+
+                int auxAvg = (Integer.valueOf(mascotaViewHolder.tvAVG.getText().toString()) + 1);
+                mascotaViewHolder.tvAVG.setText(String.valueOf(auxAvg));
+                mascota.setAvg(auxAvg);
             }
         });
 
@@ -78,6 +84,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         private TextView tvNombreCV;
         private TextView tvEdadCV;
         private ImageButton btnLike;
+        private TextView tvAVG;
 
 
         public MascotaViewHolder(View itemView) {
@@ -86,6 +93,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             tvEdadCV = (TextView) itemView.findViewById(R.id.tvEdadCV);
             imgFoto = (ImageView) itemView.findViewById(R.id.imgFoto);
             btnLike = (ImageButton) itemView.findViewById(R.id.btnLike);
+            tvAVG = (TextView) itemView.findViewById(R.id.textViewAVG);
         }
     }
 }

@@ -8,4 +8,6 @@
     <string name="menu_fav">Favoritas</string>
     <string name="texto_ayuda">Created By Alejandro</string>
     <string name="texto_config">Created By Alejandro</string>
+    <string name="edad">Edad:</string>
+    <string name="todo">TODO</string>
 </resources>
